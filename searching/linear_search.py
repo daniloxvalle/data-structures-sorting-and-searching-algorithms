@@ -12,6 +12,6 @@ def linear_search(arr, target):
 
 
 array = [12, 6, 9, 41, 33, 10, 24]
-element = 33
+ELEMENT = 33
 
-print(linear_search(array, element))
+print(linear_search(array, ELEMENT))
