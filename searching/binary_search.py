@@ -1,6 +1,9 @@
 sample_array = [5, 14, 22, 39, 41, 50, 53, 66, 74, 81, 90, 99]
 
 
+### Binary Search
+# Returns the index of the first occurrence of the element in the array
+# Complexity: O(log n)
 def binary_search(array, value, begin=0, end=None):
     if end is None:
         end = len(array) - 1

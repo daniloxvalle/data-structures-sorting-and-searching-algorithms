@@ -1,7 +1,9 @@
 # pylint: disable=consider-using-enumerate
 
 
+### Linear Search
 # Returns the index of the first occurrence of the element in the array
+# Complexity: O(n)
 def linear_search(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
