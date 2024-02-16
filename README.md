@@ -10,8 +10,8 @@ This repository contains implementations of various data structures and algorith
 
 ## Searching Algorithms:
 
-* Binary Search: A search algorithm that finds the position of a target value within a sorted array.
-
+* Binary Search: An efficient search algorithm that finds the position of a target value within a sorted array.
+* Linear Search: A search algorithm that checks every element in the array sequentially until it finds a match.
 
 ## Sorting Algorithms:
 
