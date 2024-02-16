@@ -2,9 +2,9 @@
 
 
 # Returns the index of the first occurrence of the element in the array
-def linear_search(arr, element):
+def linear_search(arr, target):
     for i in range(len(arr)):
-        if arr[i] == element:
+        if arr[i] == target:
             return i
     return None
 
