@@ -18,15 +18,17 @@ class BinaryTree:
         else:
             self.root = None
 
+    # Visits the nodes of the tree in the following order: left subtree, root node, right subtree.
     def symetric_traversal(self, node=None):
         if node is None:
             node = self.root
 
+        # Left subtree
         if node.left:
             self.symetric_traversal(node.left)
-
-        print(node, end="")
-
+        # Root node
+        print(node, end=" ")
+        # Right subtree
         if node.right:
             self.symetric_traversal(node.right)
 
@@ -116,3 +118,26 @@ if __name__ == "__main__":
 
     print("\n\nTree Sum:", end="\n")
     print("\nsum:", tree_digit.tree_sum())
+
+    n1 = Node("A")
+    n2 = Node("B")
+    n3 = Node("C")
+    n4 = Node("D")
+    n5 = Node("E")
+    n6 = Node("F")
+    n7 = Node("G")
+    n8 = Node("H")
+    n9 = Node("I")
+
+    n1.left = n2
+    n1.right = n3
+    n2.left = n4
+    n2.right = n5
+    n3.left = n6
+    n3.right = n7
+    n6.left = n8
+    n6.right = n9
+
+    tree.root = n1
+    print("")
+    tree.symetric_traversal()
