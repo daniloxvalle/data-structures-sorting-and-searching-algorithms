@@ -32,6 +32,37 @@ class BinaryTree:
         if node.right:
             self.symetric_traversal(node.right)
 
+    def post_order_traversal(self, node=None):
+        if node is None:
+            node = self.root
+
+        # Left subtree
+        if node.left:
+            self.post_order_traversal(node.left)
+        # Right subtree
+        if node.right:
+            self.post_order_traversal(node.right)
+        # Root node
+        print(node, end=" ")
+
+    def height(self, node=None):
+        if node is None:
+            node = self.root
+
+        left_height = 0
+        right_height = 0
+
+        if node.left:
+            left_height = self.height(node.left)
+
+        if node.right:
+            right_height = self.height(node.right)
+
+        if left_height > right_height:
+            return left_height + 1
+
+        return right_height + 1
+
     def tree_sum(self):
         def tree_sum_root(node):
             if node is None:
@@ -80,6 +111,8 @@ if __name__ == "__main__":
     # (a + (b * ((c/d) - e)))
 
     tree.symetric_traversal()
+    print("\nTree Height:", end="")
+    print(tree.height())
 
     tree_digit = BinaryTree()
 
